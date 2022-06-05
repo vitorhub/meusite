@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+@import url('https://fonts.googleapis.com/css2?family=Joan&display=swap');
+body {
+    font-family: 'Joan', serif;
+}
+    ul, ol, li {
+        list-style: none;
+}
+
+.cabecalho{
+    display: flex;
+    justify-content: space-between;
+    background-color: #292D33;
+    height: 70px;
+}
+.envolve-logo{
+    width: 50px;
+    border-radius: 50%;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 30px;
+}
+.logo{
+    width: 50px;
+    border-radius: 50%;
+    background-color: white;
+}
+nav{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+nav ul{
+    display: flex;
+    margin-right: 50px;
+}
+nav ul li{
+    margin-right: 10px;
+    font-size: 2rem;
+}
+.cabecalho nav ul li a{
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}.cabecalho nav ul li a:hover{
+    cursor: pointer;
+    background-color: #565955;
+}
+
+.secao-minha-foto{
+    width: 100%;
+    text-align: center; 
+}
+.envolve-foto, .foto-principal{
+    border-radius: 50%;
+}
+.envolve-foto{
+    display: inline-block;
+    margin-top: 100px;
+}
+.nome{
+    margin-top: 20px;
+    font-size: 2rem;
+}
+.titulo{
+    margin-top: 20px;
+    font-size: 2rem;
+}
+
+.habilidades-tecnologias{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+}
+.habilidades, .tecnologias {
+    text-align: center;
+    padding: 20px;
+    width: 400px;
+    height: auto;
+}
+.habilidades h2, .tecnologias h2{
+    text-align: center;
+    font-size: 2rem;
+}
+.habilidades ul{
+    padding: 20px;
+}
+.habilidades ul li:nth-child(1){
+    margin-top: 0;
+}
+.habilidades ul li{
+    font-size: 1.5rem;
+    margin: 30px 0 30px 0;
+    border-bottom: 2px solid black;
+}
+.icones-tecnologias{
+    width: 100px;
+    margin: 20px;
+}
+.idiomas, .pontos-a-melhorar{
+    margin: 20px;
+    width: auto;
+    text-align: center;
+    padding: 20px;
+}
+.idiomas h2, .pontos-a-melhorar h2{
+    font-size: 2rem;
+    padding: 10px;
+}
+.idiomas p, .pontos-a-melhorar p{
+    font-size: 1.5rem;
+}
+
+.github a, .linkedin a{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: #000;
+}
+.github h2, .linkedin h2{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 20px;
+}
+.github-logo, .linkedin-logo{
+    width: 70px;
+}
+.linkedin{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.titulo-projetos{
+    text-align: center;
+    padding: 20px;
+    font-size: 2rem;
+}
+.secao-projetos{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap;
+    width: 600px;
+    margin-bottom: 50px;
+}
+.secao-projetos h3{
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.imagens-projetos{
+    margin: 20px 20px 0 20px;
+}
+
+.rodape{
+    width: 100%;
+    position: absolute;
+    margin-bottom: 0;
+    line-height: 30px;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    background-color: #292D33;
+}
+.rodape a{
+    text-decoration: none;
+    color: #fff;
+}
+@media(max-width: 375px){
+    .cabecalho nav ul li a{
+        font-size: 1rem;
+    }
+    .cabecalho nav ul{
+            margin-right: 0;
+    }
+    .idiomas, .pontos-a-melhorar{
+        margin-right: 0;
+        margin-left: 0;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .titulo-projetos{
+        padding-left: 0;
+        padding-right: 0;
+        width: 375px;
+    }
+    .secao-projetos{
+        width: 350px;
+        justify-content: space-around;
+    }
+    .imagens-projetos{
+        margin: 10px;
+    }
+    .rodape{
+        width: 375px;
+    }
+}
