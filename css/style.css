@@ -1,232 +1,213 @@
-* {
-    margin: 0;
-    padding: 0;
-    border: 0;
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Finlandica:wght@600;700&display=swap');
+body{
+    background-image: url(../imagens/praia.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #d6825b;
+    font-family: 'Raleway', sans-serif;
+    transition: background-image 5s 1s;
+    /* para animação transition propriedade tempo delay*/
 }
-@import url('https://fonts.googleapis.com/css2?family=Joan&display=swap');
-body {
-    font-family: 'Joan', serif;
-}
-    ul, ol, li {
-        list-style: none;
-}
-.cabecalho{
+.container{
     display: flex;
-    justify-content: space-between;
-    background-color: #292D33;
-    height: 70px;
+    flex-direction: column;
 }
-.envolve-logo{
-    width: 50px;
-    border-radius: 50%;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: 30px;
+.secao-foto h2{
+    width: fit-content;
+    font-size: 1.5em;
+    margin: 20px auto;
+    letter-spacing: 3px;
+    font-family: 'Finlandica', sans-serif;
+    color: #007FBB;
 }
-.logo{
-    width: 50px;
-    border-radius: 50%;
-    background-color: white;
-}
-nav{
-    margin-top: auto;
-    margin-bottom: auto;
-}
-nav ul{
-    display: flex;
-    margin-right: 50px;
-}
-nav ul li{
-    margin-right: 10px;
-    font-size: 2rem;
-}
-.cabecalho nav ul li a{
-    padding: 10px;
-    text-decoration: none;
-    color: white;
-    text-transform: uppercase;
-}.cabecalho nav ul li a:hover{
-    cursor: pointer;
-    background-color: #565955;
-}
+.secao-foto h2 span:nth-child(1){ color: red; }
+.secao-foto h2 span:nth-child(2){ color: #9872A2;}
+.secao-foto h2 span:nth-child(3){ color: #CA7D00;}
+.secao-foto h2 span:nth-child(5){ color: #000;}
+.secao-foto h2 span:nth-child(6){ color: #5CF100;}
+.secao-foto h2 span:nth-child(8){ color: #000;}
+.secao-foto h2 span:nth-child(10){ color: #CA7D00;}
 
-.secao-minha-foto{
-    width: 100%;
-    text-align: center; 
+.secao-foto{
+    width: fit-content;
+    margin: 30px auto;
+    padding: 20px;
+    /* para animação */
+    transform: translateX(-100%);
+    animation: comeinleft 1s ease forwards;
 }
-.envolve-foto, .foto-principal{
+@keyframes comeinleft{
+to{ transform: translateX(0);
+}}
+/* para animação */
+
+.foto-principal{
     border-radius: 50%;
+    width: 150px;
+    margin-top: 70px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
-.envolve-foto{
-    display: inline-block;
-    margin-top: 100px;
-}
-.nome{
-    margin-top: 20px;
-    font-size: 2rem;
-}
-.titulo{
-    margin-top: 20px;
-    font-size: 2rem;
-}
-
-.habilidades-tecnologias{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 50px;
-}
-.habilidades, .tecnologias {
-    text-align: center;
-    padding: 20px;
-    width: 400px;
-    height: auto;
-}
-.habilidades h2, .tecnologias h2{
-    text-align: center;
-    font-size: 2rem;
-}
-.habilidades ul{
-    padding: 20px;
-}
-.habilidades ul li:nth-child(1){
-    margin-top: 0;
-}
-.habilidades ul li{
-    font-size: 1.5rem;
-    margin: 30px 0 30px 0;
-    border-bottom: 2px solid black;
-}
-.icones-tecnologias{
-    width: 100px;
-    margin: 20px;
-}
-.idiomas, .pontos-a-melhorar{
-    margin: 20px;
-    width: auto;
-    text-align: center;
-    padding: 20px;
-}
-.idiomas h2, .pontos-a-melhorar h2{
-    font-size: 2rem;
-    padding: 10px;
-}
-.idiomas p, .pontos-a-melhorar p{
-    font-size: 1.5rem;
-}
-
-.github a, .linkedin a{
-    display: flex;
-    justify-content: center;
-    text-decoration: none;
-    color: #000;
-}
-.github h2, .linkedin h2{
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: 20px;
+.tecnologias img{
+    width: 5rem;
 }
 .github-logo, .linkedin-logo{
-    width: 70px;
+    width: 5rem;
 }
-.linkedin{
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-/* sessao projetos ***************** */
-.titulo-projetos{
-    text-align: center;
-    margin: 30px auto 10px auto;
-}
-.secao-projetos{
-    background-color: #565955;
+.habilidades-tecnologias{
     display: flex;
-    position: relative;
-    width: 300px;
-    justify-content: center;
+    margin: auto;
+    margin-top: 5rem;
+}
+/* para animação */
+/* [data-anime="down"]{
+    transform: translate3d(0, -100px, 0);
+} */
+[data-anime="down"]{
+    opacity: 0;
+    transition: 1s;
+    transform: translate3d(0, 200px, 0)
+}
+[data-anime="right"]{
+    opacity: 0;
+    transition: 1s;
+    transform: translate3d(-100%, 0, 0)
+}
+[data-anime="left"]{
+    opacity: 0;
+    transition: 1s;
+    transform: translate3d(100px, 0, 0)
+}
+/* zerando o 3d */
+[data-anime].animate{ 
+    opacity:1;
+    transform: translate3d(0,0,0);
+}
+
+
+.habilidades{
+    color: #007FBB;
+    margin-right: 10px;
+    width: 250px;
+    text-align: center;
+}
+.habilidades h2{
+    padding: 15px;
+}
+.habilidades ul li{
+    margin-top: 10px;
+    border-bottom: 1px solid #000;
+    font-weight: 700;
+    padding-bottom: 5px;
+}
+.tecnologias{
+    width: 250px;
+    padding: 15px;
+    text-align: center;
+}
+.tecnologias h2{
+    color: #007FBB;
+    margin-bottom: 15px;
+}
+.idiomas{
+    text-align: center;
+    color: #007FBB;
+    width: fit-content;
     margin: 20px auto;
 }
-.projeto{
-    height: 200px;
+.idiomas p{
+    font-weight: 700;
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+}
+.pontos-a-melhorar{
     text-align: center;
+    color: #007FBB;
+    width: fit-content;
+    margin: 20px auto;
 }
-.imagem-projeto{
-    width: 100%;
-    height: 200px;
+.pontos-a-melhorar p{
+    font-weight: 700;
+    padding-bottom: 5px;
 }
-#seta-voltar{
-    position: absolute;
-    left: 0;
-    width: 40px;
-    top: 25%;
-    transform: translateY(-50%);
-    transform: rotateX(0deg) rotateY(180deg);
-}#seta-voltar, #seta-avancar:hover{
-    cursor: pointer;
+.pontos-a-melhorar p:nth-child(3){
+    border-bottom: 1px solid black;
 }
-#seta-avancar{
-    position: absolute;
-    width: 40px;
-    right: 0;
-    top: 40%;
-    transform: translateY(-50%);
+.linkedin-e-github{
+    display: flex;
+    margin: 30px auto;
 }
-.projeto a{
+.linkedin{
     text-align: center;
-}
-.projeto a h2{
-    position: absolute;
-    bottom: 50px;
-    left: 50%; transform: translateX(-50%);
-    color: #000; font-size: 1.5rem;
-}
-.projeto a h3{
-    position: absolute;
-    bottom: 10px;
-    left: 50%; transform: translateX(-50%);
-    color: #000; font-size: 1rem;
-}
-.mostrar{
-    display: block;
-}
-.esconde{
-    display: none;
-}
-.opacidade{
-    cursor: default;
-    opacity: 0.5;
-}
-/* fim sessao projetos ***************** */
+    margin-right: 30px;
+}.linkedin a{color: black;}
+.github{
+    text-align: center;
+    margin-left: 30px;
+}.github a{color: black;}
 
+.portifolio{
+    margin: 30px auto;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 900px;
+    justify-content: center;
+}
+.titulo-portifolio{
+    margin: 30px auto 0 auto;
+    font-size: 2rem;
+    letter-spacing: 30px;
+    color: #007FBB;
+    border-bottom: 1px solid #000;
+}
+.item img{
+    width: 280px;
+    margin: 10px;
+    border-radius: 15px;
+}
 .rodape{
-    width: 100%;
-    position: absolute;
-    margin-bottom: 0;
-    line-height: 30px;
-    padding: 10px;
+    background-color: #FFF;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    line-height: 20px;
+    justify-content: center;
     text-align: center;
-    color: #fff;
-    background-color: #292D33;
+    background-color: #074a69;
+}.rodape span{
+    font-weight: 700;
+    color: #FFF;
 }
-.rodape a{
-    text-decoration: none;
-    color: #fff;
+.rodape small{
+    display: inline;
 }
-@media(max-width: 375px){
-    .cabecalho nav ul li a{
-        font-size: 1rem;
-    }
-    .cabecalho nav ul{
-            margin-right: 0;
-    }
-    .idiomas, .pontos-a-melhorar{
-        margin-right: 0;
-        margin-left: 0;
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-    
-    .rodape{
+
+
+@media (max-width:414px){
+    body{
         width: 375px;
+        background-size: 375px 100%;
+        background-image: url(../imagens/praia-mobile.png);
+    }
+    .secao-foto h2{
+        font-size: 14px;
+    }
+    .habilidades-tecnologias{
+        margin-top: 200px;
+        flex-direction: column;
+    }
+    [data-anime="right"]{
+        opacity: 0;
+        transition: 1s;
+        transform: translate3d(0, 200, 0)
+    }
+    .tecnologias{
+        margin-top: 2rem;
+    }
+    .titulo-portifolio{
+        letter-spacing: 10px;
     }
 }

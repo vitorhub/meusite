@@ -5,138 +5,134 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu site</title>
+    <title>Minha Pagina</title>
+    <link rel="icon" type="image/x-icon" href="imagens/favicon.ico">
+    <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/reset.css">
+
 </head>
 
 <body>
-    <header class="cabecalho">
-        <div class="envolve-logo">
-            <img class="logo" src="imagens/logo.svg" alt="logo vitor falcao">
-        </div>
-        <nav>
-            <ul>
-                <li><a href=""> Sobre </a></li>
-                <li><a href=""> Contato </a></li>
-                <li><a href=""> Carreira </a></li>
-            </ul>
-        </nav>
-    </header>
+    <section class="container">
+        <header class="cabecalho">
+            <img class="logo" src="imagens/logo.png" alt="logo vitor falcao">
 
-    <main>
-        <section class="secao-minha-foto">
-            <div class="envolve-foto">
-                <img class="foto-principal" src="imagens/me.jpg" alt="foto vitor falcao">
+            <div class="menu">
+                <input type="checkbox" id="checkbox-menu">
+                <label for="checkbox-menu" id="label">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
             </div>
-            <h1 class="nome">Joao Vitor Falcao</h1>
-            <h1 class="titulo">Desenvolvedor front end</h1>
-        </section>
 
-        <section class="habilidades-tecnologias">
-            <article class="habilidades">
-                <h2>
-                    Habilidades gerais
-                </h2>
+            <nav class="mostrar" id="navegacao">
                 <ul>
-                    <li>Habilidade de comunicação clara e objetiva</li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#">Carreira</a></li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <section class="secao-foto">
+            <img class="foto-principal" src="imagens/me.jpg" alt="foto vitor falcao">
+            <h2>
+                <span>( )</span> <span>=></span> <span>{</span><br>
+                &nbsp&nbsp <span>nome: </span> "João Vitor Falcão"<span>,</span><br>
+                &nbsp&nbsp <span>cargo: </span> "Desenvolvedor Front End"<br>
+                <span>}</span>
+            </h2>
+        </section>
+        <section class="habilidades-tecnologias">
+            <div class="habilidades" data-anime="right">
+                <h2>Habilidades</h2>
+                <ul>
+                    <li>Habilidade de comunicação</li>
                     <li>Perfil em equipe solidário, colaborativo</li>
                     <li>Autonomia em tomadas de decisão</li>
                 </ul>
-            </article>
-            <article class="tecnologias">
-                <h2>
-                    Tecnologias
-                </h2>
-                <section class="secao-icones">
-                    <img class="icones-tecnologias"
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
-                    <img class="icones-tecnologias"
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />
-                    <img class="icones-tecnologias"
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
-                    <img class="icones-tecnologias"
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" />
-                </section>
-            </article>
+            </div>
+            <div class="tecnologias" data-anime="left">
+                <h2>Tecnologias</h2>
+                <img class="icones-tecnologias"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
+                <img class="icones-tecnologias"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />
+                <img class="icones-tecnologias"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
+                <img class="icones-tecnologias"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" />
+            </div>
         </section>
 
-        <article class="idiomas">
-            <h2>
-                Idiomas
-            </h2>
-            <p>Ingles: Escrita e leitura. Compreensão de conversa formal.</p>
-        </article>
-        <article class="pontos-a-melhorar">
+        <div class="idiomas" data-anime="down">
+            <h2> Idiomas </h2>
+            <p>Compreensão e conversação em nivel formal</p>
+        </div>
+
+        <article class="pontos-a-melhorar" data-anime="down">
             <h2>Pontos a melhorar</h2>
-            <p>Capacidade de liderança</p>
+            <p>Criatividade</p>
+            <p>Liderança</p>
         </article>
-
-        <article class="github">
-            <a href="https://github.com/vitorhub" target="_blank">
-                <img class="github-logo"
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" />
-                <h2>Perfil no Github</h2>
-            </a>
-        </article>
-
-        <article class="linkedin">
-            <a href="https://www.linkedin.com/in/vitorfalcaodesenvolvedor/" target="_blank">
-                <img class="linkedin-logo"
+        <div class="linkedin-e-github">
+            
+            <article class="linkedin" data-anime="right">
+                <a href="https://www.linkedin.com/in/vitorfalcaodesenvolvedor/" target="_blank">
+                    <h2>Linkedin</h2>
+                    <img class="linkedin-logo"
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-plain.svg" />
-                <h2>Linkedin</h2>
-            </a>
-        </article>
+                </a>
+            </article>
+            <article class="github" data-anime="left">
+                <a href="https://github.com/vitorhub" target="_blank">
+                    <h2>Github</h2>
+                    <img class="github-logo"
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" />
+                </a>
+            </article>
+        </div>
 
-        <h2 class="titulo-projetos">Projetos</h2>
-    <section class="secao-projetos">
-        <img id="seta-voltar" src="imagens/seta.png" class="opacidade">
-        
-        <div class="projeto mostrar">
-            <a href="https://vitorhub.github.io/frontendmentor-rating/" target="_blank">
-                <img class="imagem-projeto" src="imagens/projeto-um.jpg" alt="projeto rating">
-            </a>
+        <h2 class="titulo-portifolio">Portifólio</h2>
+        <div class="portifolio">
+            <div class="item 1">
+                <a href="https://vitorhub.github.io/frontendmentor-rating/" target="_blank">
+                    <img class="imagem-projeto" src="imagens/projeto-um.jpg" alt="projeto rating">
+                </a>
+            </div>
+            <div class="item 2">
+                <a href="https://vitorhub.github.io/frontendmentor-accordion/" target="_blank">
+                    <img class="imagem-projeto" src="imagens/projeto-dois.jpg" alt="projeto accordion">
+                </a>
+            </div>
+            <div class="item 3">
+                <a href="https://vitorhub.github.io/frontendmentor-article-preview/" target="_blank">
+                    <img class="imagem-projeto" src="imagens/projeto-tres.jpg" alt="projeto tres">
+                </a>
+            </div>
+            <div class="item 4">
+                <a href="https://vitorhub.github.io/frontendmentor-apparel/" target="_blank">
+                    <img class="imagem-projeto" src="imagens/projeto-quatro.jpg" alt="projeto quatro">
+                </a>
+            </div>
+            <div class="item 5">
+                <a href="https://vitorhub.github.io/frontendmentor-intro-component/" target="_blank">
+                    <img class="imagem-projeto" src="imagens/projeto-cinco.jpg" alt="projeto cinco">
+                </a>
+            </div>
         </div>
-        <div class="projeto esconde">
-            <a href="https://vitorhub.github.io/frontendmentor-accordion/" target="_blank">
-                <img class="imagem-projeto" src="imagens/projeto-dois.jpg" alt="projeto accordion">
-            </a>
-        </div>
-        <div class="projeto esconde">
-            <a href="https://vitorhub.github.io/frontendmentor-article-preview/" target="_blank">
-                <img class="imagem-projeto" src="imagens/projeto-tres.jpg" alt="projeto tres">
-            </a>
-        </div>
-        <div class="projeto esconde">
-            <a href="https://vitorhub.github.io/frontendmentor-apparel/" target="_blank">
-                <img class="imagem-projeto" src="imagens/projeto-quatro.jpg" alt="projeto quatro">
-            </a>
-        </div>
-        <div class="projeto esconde">
-            <a href="https://vitorhub.github.io/frontendmentor-intro-component/" target="_blank">
-                <img class="imagem-projeto" src="imagens/projeto-cinco.jpg" alt="projeto cinco">
-            </a>
-        </div>
-        <div class="projeto esconde">
-            <a href="#">
-                <img class="imagem-projeto" src="imagens/projeto-seis.jpg" alt="projeto seis">
-                <h2>Projeto seis</h2>
-                <h3>Em breve    </h3>
-            </a>
-        </div>
-        
-        <img id="seta-avancar" src="imagens/seta.png" >
+
     </section>
-
-
-    </main>
-    <footer class="rodape">
-            Coded by <a href="#">Vitor Falcão </a> <br>
-            joaofalcao.33@outlook.com <br>
-            Fone/Whats: (51)996518554 <br>
-            Rua Rômulo, nº140, Rei do Peixe - Quintão - RS.
+    <footer class="rodape" id="contato">
+        <small>Coded by &nbsp<span> Vitor Falcão </span></small>
+        <small>joaofalcao.33@outlook.com</small>
+        <small>Fone/Whats: (51)996518554</small>
+        <small>Rua Rômulo, nº140, Rei do Peixe, Quintão RS.</small>
     </footer>
-    <script src="js/slider.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,129 @@
+.logo {
+    width: 30px;
+    border-radius: 50%;
+    margin-left: 20px;
+    display: block;
+}
+
+.cabecalho {
+    background-color: #074a69;
+    display: flex;
+    justify-content: space-between;
+    height: 10vh;
+    width: 100%;
+    align-items: center;
+}
+
+.menu {
+    display: none;
+}
+
+.cabecalho nav ul {
+    display: flex;
+    margin-right: 40px;
+}
+
+.cabecalho nav ul li {
+    text-transform: uppercase;
+    font-weight: 1000;
+    margin: 0 10px;
+    border: 1px solid #d6825b;
+    padding: 5px 10px;
+    border-radius: 50px;
+}
+
+.cabecalho nav ul li a {
+    color: #d6825b;
+    font-weight: 400;
+    transition: 0.5s ease;
+}
+.cabecalho nav ul li a:hover{
+    color: #007FBB;
+}
+
+@media (max-width:375px) {
+    .cabecalho {
+        height: 7vh;
+    }
+
+    .menu {
+        right: 0;
+        position: absolute;
+        display: flex;
+        margin-right: 30px;
+    }
+
+    #checkbox-menu {
+        position: absolute;
+        opacity: 0;
+        display: block;
+    }
+
+    .menu label {
+        cursor: pointer;
+        position: relative;
+        display: block;
+        height: 22px;
+        width: 30px;
+    }
+
+    .menu label span {
+        position: absolute;
+        display: block;
+        height: 3px;
+        width: 100%;
+        border-radius: 30px;
+        background-color: #d6825b;
+        transition: 0.25s ease-in-out;
+    }
+
+    .menu label span:nth-child(1) {
+        top: 0;
+    }
+
+    .menu label span:nth-child(2) {
+        top: 8px;
+    }
+
+    .menu label span:nth-child(3) {
+        top: 16px;
+    }
+
+    #checkbox-menu:checked+label span:nth-child(1) {
+        transform: rotate(-45deg);
+        top: 8px;
+    }
+
+    #checkbox-menu:checked+label span:nth-child(2) {
+        opacity: 0;
+    }
+
+    #checkbox-menu:checked+label span:nth-child(3) {
+        transform: rotate(45deg);
+        top: 8px;
+    }
+
+    #navegacao {
+        transition: 0.5s ease-in;
+    }
+
+    .mostrar {
+        visibility: hidden;
+        transition: 0.5s ease-in;
+    }
+
+    .cabecalho nav ul {
+        position: absolute;
+        display: flex;
+        right: 0;
+        margin-right: 0;
+        margin-top: 20px;
+        flex-direction: column;
+    }
+
+    .cabecalho nav ul li {
+        margin-top: 10px;
+    }
+
+
+}
