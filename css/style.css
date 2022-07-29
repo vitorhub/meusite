@@ -158,8 +158,8 @@ to{ transform: translateX(0);
 }
 .titulo-portifolio{
     margin: 30px auto 0 auto;
-    font-size: 2rem;
-    letter-spacing: 30px;
+    font-size: 1.5rem;
+    letter-spacing: 20px;
     color: #007FBB;
     border-bottom: 1px solid #000;
 }
