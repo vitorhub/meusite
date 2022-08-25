@@ -123,19 +123,6 @@ to{ transform: translateX(0);
     border-bottom: 1px solid black;
     padding-bottom: 5px;
 }
-.pontos-a-melhorar{
-    text-align: center;
-    color: #007FBB;
-    width: fit-content;
-    margin: 20px auto;
-}
-.pontos-a-melhorar p{
-    font-weight: 700;
-    padding-bottom: 5px;
-}
-.pontos-a-melhorar p:nth-child(3){
-    border-bottom: 1px solid black;
-}
 .linkedin-e-github{
     display: flex;
     margin: 30px auto;
