@@ -14,8 +14,7 @@ menu.addEventListener("click",
 
 const item = document.querySelectorAll("[data-anime]");
 const animeScroll = ()=>{
-    const windowTop = window.pageYOffset
-    + window.innerHeight * 0.85;
+    const windowTop = window.pageYOffset + window.innerHeight * 0.85;
     /* window.pageYOffset começa a 200 da base */
     /* window.innerHeight 635 */
 
@@ -31,7 +30,7 @@ const animeScroll = ()=>{
     )
 }
 
-animeScroll();
+/* animeScroll(); */
 window.addEventListener("scroll",
     ()=>{animeScroll() }
 )
